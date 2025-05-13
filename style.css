@@ -91,14 +91,14 @@ span{
     padding: 30px 12% 0;
 }
 .home-content{
-    max-width: 800px;
+    max-width: 600px;
 }
 .home-content h3{
     font-size: 42px;
 }
 .home-content h1{
     font-size: 62px;
-    line-height: 1.2;
+    line-height: 1.0;
 }
 .home-content p{
     font-size: 20px;
@@ -145,7 +145,7 @@ span{
 }
 .img-box img{
     border-radius: 50%;
-    width: 450px;   
+    width: 350px;   
 }
 ::-webkit-scrollbar{
     width: 15px;
@@ -168,7 +168,7 @@ span{
 }
 .about-img img{
     position: relative;
-    width: 450px;
+    width: 350px;
     box-shadow: 0 0 25px orangered,
                 0 0 50px orangered;
     border-radius: 50%;
@@ -176,15 +176,15 @@ span{
 .about-content h2{
     text-align: left;
     color: white;
-    font-size: 42px;
+    font-size: 40px;
 }
 .about-content h3{
-    font-size: 62px;
+    font-size: 60px;
     color: white;
 }
 .about-content p{
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     margin: 2em;
 }
 .experience {
@@ -366,4 +366,100 @@ span{
     text-align: center;
     font-size: 12px;
     color: white;
+}
+
+
+/* ------------------------------- */
+/* Responsive Design Starts Here  */
+/* ------------------------------- */
+
+/* Medium Devices (Tablets) */
+@media (max-width: 992px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .home {
+        flex-direction: column;
+        padding: 20px 5%;
+        gap: 3em;
+    }
+
+    .home-content h1 {
+        font-size: 48px;
+    }
+
+    .img-box img {
+        width: 300px;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 4em;
+        padding: 10% 5%;
+    }
+
+    .about-img img {
+        width: 300px;
+    }
+
+    .btn-box {
+        flex-direction: column;
+        width: 100%;
+        gap: 1em;
+    }
+}
+
+/* Small Devices (Mobiles) */
+@media (max-width: 576px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar {
+        display: none; /* or turn it into a mobile menu */
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content h3 {
+        font-size: 28px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .img-box img {
+        width: 250px;
+    }
+
+    .about-content h2,
+    .about-content h3 {
+        font-size: 28px;
+    }
+
+    .experience .heading,
+    .projects .heading {
+        font-size: 30px;
+    }
+
+    .project-card img {
+        height: 150px;
+    }
+
+    .contact-form h2 {
+        font-size: 28px;
+    }
+
+    .contact-form form {
+        padding: 0 1em;
+    }
+
+    .footer ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
