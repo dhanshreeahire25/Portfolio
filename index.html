@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Simple Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <!--Adding button event on here-->
+        <script>
+            // Wait until the page is fully loaded
+            document.addEventListener("DOMContentLoaded", function() {
+                // Get the buttons by their class
+                const hireButton = document.querySelector('.btn-1');
+                const experienceButton = document.querySelector('.btn-2');
+                
+                // Add an event listener for the "Hire Me" button
+                hireButton.addEventListener('click', function() {
+                    alert('You clicked on Hire Me!');
+                    // You can also redirect to another page like:
+                    // window.location.href = 'contact.html';
+                });
+        
+                // Add an event listener for the "Experience" button
+                experienceButton.addEventListener('click', function() {
+                    // Scroll to the "Experience" section
+                    document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        </script>
+        
+        <header class="header">
+            <a href="#" class="logo"><span>Dhan</span>shree</a>
+            <nav class="navbar">
+                <a href="#" class="active">Portfolio</a>
+                <a href="#experience">Experience</a>
+                <a href="#">Projects</a>
+                <a href="#">Education</a>
+            </nav>
+            <a href="#" class="contact">Contact Me</a>
+            <a href="Dhanshree-resume (1).pdf" download class="download-resume">Download Resume</a>
+        </header>
+        <section class="home">
+            <div class="home-content">
+                <h3>Hi</h3>
+                
+                <h1>I'm<span>Dhanshree<br></span>a Full-Stack Developer</h1>
+                <p>
+                    Ideas spark, I bring them life,<br>
+                    With code that cuts like a knife.<br>
+                    Full stack flow from start to end,<br>
+                    Your tech goals, I help transcend.<br>
+                </p>
+                <div class="btn-box">
+                    <button class="btn-1">Hire Me</button>
+                    <button class="btn-2">Experience</button>
+                </div>
+            </div>
+            <div class="img-box">
+                <img src="img.jpg" alt="">
+            </div>
+        </section>
+        <!--About section-->
+        <section class="about">
+            <div class="about-img">
+                <img src="img.jpg" alt="">
+            </div>
+            <div class="about-content">
+                <h2 class="heading">About <span>Me</span></h2>
+                <h3>Full-Stack<span>Developer</span></h3>
+                <p>
+                    I'm a passionate Full-Stack Developer with a focus on building seamless web experiences from the ground up. I specialize in both frontend and backend development, working with a modern tech stack that includes JavaScript (Node.js) and Python.
+
+                    On the frontend, I build dynamic, responsive user interfaces using JavaScript frameworks and libraries like React, along with HTML5, CSS3, and modern UI/UX principles to create engaging digital experiences.
+
+                    On the backend, I use Node.js and Python to design scalable, secure, and high-performance server-side applications. With tools like Express.js, Flask, and FastAPI, I develop RESTful APIs, integrate databases, and architect backend systems that power robust applications.
+
+                    From crafting intuitive UIs to engineering backend logic, I enjoy delivering full-cycle solutions that are clean, maintainable, and optimized for performance. My goal is to bridge the gap between code and user experience.
+                </p>
+                <a href="#experience" class="btn-2" >Experience</a>
+            </div>
+        </section>
+        <!--EXperience section-->
+        <section class="experience" id="experience">
+            <h2 class="heading">My <span>Experience</span></h2>
+            <div class="experience-content">
+                <div class="experience-box">
+                    <h3>Front-end Developer(contract)</h3>
+                    <p>Anon By Soni technologies – 4th Sep 2024 to 10th March 2025</p>
+                    <p>Worked on a contract basis to develop and enhance front-end features using React. Built responsive UI
+                        components, integrated APIs, and collaborated with design and backend teams to deliver user-focused
+                        web solutions.
+                        I am working on contract basis. I am also handling data scraping tasks using python and playwright.</p>
+                </div>
+            </div>
+        </section>
+        <!--Project section-->
+        <section class="projects" id="projects">
+            <h2 class="heading">My <span>Projects</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Project 1">
+                    <div class="project-info">
+                        <h3>PetAdopt - Application</h3>
+                        <p>Built using React Native with a responsive and user-friendly UI for both Android and iOS platforms.
+                            Integrated Firebase for user authentication and real-time database storage.
+                            Implemented features like pet listing, filtering by breed/age/location, adoption request forms, and shelter
+                            profiles.
+                            Utilized RESTful APIs to fetch and display dynamic pet data and shelter information.
+                            Enabled push notifications using Expo to update users on adoption status and new pet listings.
+                            Prioritized performance and usability to ensure smooth and intuitive user experience.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project2.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <h3>BioGPT - OpenAI</h3>
+                        <p>Developed BioGPT, a domain-specific adaptation of GPT for biomedical applications.
+                            Focused on natural language understanding and text generation in life sciences.
+                            Enhanced information retrieval, biomedical question answering, and literature summarization.
+                            Utilized domain-specific datasets (e.g., PubMed) for model training and evaluation.
+                            Contributed to advancing AI applications in healthcare and</p>
+                    </div>
+                </div>
+                <!-- Add more project-card elements as needed -->
+            </div>
+        </section>
+        
+        <!--contact form-->
+        <section class="contact-form">
+            <h2 class="contact-me">Contact<span>Me</span></h2>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text"placeholder="Full Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="number"placeholder="Phone Number">
+                    <input type="text" placeholder="Subject">
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message" class="btn-1">
+            </form>
+        </section>
+
+        <footer class="footer">
+            <div class="social">
+                <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+                <a href="https://www.linkedin.com/in/dhanshree-ahire-a1030a243"><i class="bx bxl-linkedin-square"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+                <a href="https://github.com/dhanshreeahire25"><i class="bx bxl-github"></i></a>
+            </div>
+            <ul class="list">
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">About Me</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+            </ul>
+            <p class="copyright">@ 2025 Dhanshree | All Right Reversed</p>
+        </footer>
+    </body>
+</html>
